@@ -1,11 +1,32 @@
-function Article() {
-    this.url = "article/lists";
-    this.get = function (param) {
-        console.log(Object.keys(params).map(k => `${params[k]}`).join('&');
-        console.log();)
+"use strict";
 
-    };
-}
+// let ys = {
+//     name: 'yangsu',
+//     show: function () {
+//         console.log(this.name);
+//     }
+// }
 
-let a = new Article();
-console.log(a.get({ id: 1, cat: 'js' }));
+// let dn = {
+//     name: 'dongning',
+//     show: function () {
+//         console.log(this.name);
+//     }
+// }
+
+
+
+
+function user(name) {
+    return {
+        name,
+        show: function () {
+            console.log(this.name);
+        }
+    }
+};
+
+let ys = user("yangsu")
+ys.show()
+console.log(ys);
+
