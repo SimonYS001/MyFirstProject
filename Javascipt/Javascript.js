@@ -1,5 +1,11 @@
-let arr = {"ys": "niubi"};
+function Article() {
+    this.url = "article/lists";
+    this.get = function (param) {
+        console.log(Object.keys(params).map(k => `${params[k]}`).join('&');
+        console.log();)
 
-let entries = arr.entries();
+    };
+}
 
-console.log(entries.next());
+let a = new Article();
+console.log(a.get({ id: 1, cat: 'js' }));
