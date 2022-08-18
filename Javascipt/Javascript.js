@@ -1,16 +1,9 @@
-function interval(callback, delay = 100) {
-    let id = setInterval(() => callback(id), delay);
-}
+new Promise(resolve => {
+    console.log('promise');
+    // resolve('resolve');
+    reject('不成功');
 
-interval(timeId => {
-    const div = document.querySelector("body>div");
-    let left = parseInt(window.getComputedStyle(div).left);
-    div.style.left = left + 10 + 'px'
+}).then(reject => console.log(resolve), resolve => console.log('reject')
+);
+console.log('yangsu');
 
-    // console.log(left);
-
-})
-
-
-
-console.log("yangsu");
